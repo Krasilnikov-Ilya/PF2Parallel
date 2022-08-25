@@ -77,7 +77,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire.version}</version>
         <configuration>
+            <parallel>classes</parallel>
+            <threadCount>4</threadCount>
+            <perCoreThreadCount>false</perCoreThreadCount>
           <argLine>
+            -Dfile.encoding=UTF-8
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
             -Dcucumber.options="--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm --plugin pretty"
           </argLine>
