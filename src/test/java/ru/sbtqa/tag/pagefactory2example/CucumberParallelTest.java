@@ -9,6 +9,7 @@ import ru.sbtqa.tag.pagefactory.Tag;
 @CucumberOptions(monochrome = true, plugin = {"pretty"},
         glue = {"ru.sbtqa.tag.stepdefs",
                 "ru.sbtqa.tag.pagefactory2example.stepdefs"},
-        features = {"src/test/resources/ru/features/fragments/"}
+        features = {"src/test/resources/en/features/"}
 )
-public class CucumberRuFragmentsTest extends Tag {}
+public class CucumberParallelTest extends Tag {}
+
